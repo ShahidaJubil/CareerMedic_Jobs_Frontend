@@ -2,11 +2,15 @@ import { Button } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { SearchContext } from "../../Context/SearchContext";
 import "./Jobs.css";
 
-function Filter() {
+
+function Filter(props) {
+
+
+console.log("props - filter",props)
   const {
     handleHospitalname,
     handleLocation,
@@ -35,16 +39,17 @@ function Filter() {
               handleHospitalname(newInputValue);
             }}
             id="controllable-states-demo"
-            options={options}
+            options={props.option1}
             renderInput={(params) => (
               <TextField
                 {...params}
-                label="Hospital Name"
+                label={props.label1}
                 placeholder="Enter hospital name"
               />
             )}
           />
         </Grid>
+        
         <Grid item xs={10} sm={4} md={2.5} lg={2} xl={2.5}>
           <Autocomplete
             value={value2}
@@ -56,11 +61,11 @@ function Filter() {
               handleLocation(newInputValue);
             }}
             id="controllable-states-demo"
-            options={options2}
+            options={props.option2}
             renderInput={(params) => (
               <TextField
                 {...params}
-                label="Location"
+                label={props.label2}
                 placeholder="Enter your location"
               />
             )}
@@ -77,17 +82,16 @@ function Filter() {
               handleSpecialization(newInputValue);
             }}
             id="controllable-states-demo"
-            options={options3}
+            options={props.option3}
             renderInput={(params) => (
               <TextField
                 {...params}
-                label="Specialization"
+                label={props.label3}
                 placeholder="Enter your specialization"
               />
             )}
           />
         </Grid>
-
         <Grid
           item
           xs={11}

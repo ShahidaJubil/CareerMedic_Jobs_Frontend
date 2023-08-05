@@ -22,34 +22,38 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 function Jobs() {
-  const [datas, setDatas] = useState([]);
   const [selectedJob, setSelectedJob] = useState(null);
+  const { posts, data } = useContext(SearchContext);
 
- 
+  const formatText = (text) => {
+    if (text) {
+      return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+    }
+    return text;
+  };
 
-  
-  console.log(
-    "data-location",
-    datas.map((hospital) => hospital.location)
-  );
-  const hospitalSet = new Set(datas.map((hospital) => hospital.hospitalname));
-  // Remove empty values and convert them to a list
+  const hospitalSet = new Set(data?.map((hospital) => formatText(hospital.hospitalname)) || []);
   const hospitalOptions = ["Hospital", ...hospitalSet].filter(
     (hospital) => hospital && hospital.trim() !== ""
   );
+  //console.log("hospital set", hospitalOptions);
 
-  const locationSet = new Set(datas.map((hospital) => hospital.location));
-  const locationOptions = ["Location", ...locationSet];
+  const locationSet = new Set(data.map((hospital) => formatText(hospital.location)) || []);
+  const locationOptions = ["Location", ...locationSet].filter(
+    (hospital) => hospital && hospital.trim() !== ""
+  )
 
   const specializationSet = new Set(
-    datas.map((hospital) => hospital.specialization)
+    data.map((hospital) => hospital.specialization)
   );
-  const specializationOptions = ["Specialization", ...specializationSet];
+  const specializationOptions = ["Specialization", ...specializationSet].filter(
+    (hospital) => hospital && hospital.trim() !== ""
+  )
 
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(10);
 
-  const { posts, data } = useContext(SearchContext);
+  console.log("data-location", locationOptions);
 
   useEffect(() => {
     const handleUID = async () => {
@@ -85,8 +89,6 @@ function Jobs() {
     setSelectedJob(job);
     setOpen(true); // Open the dialog when "view more" is clicked
   };
-
- 
 
   return (
     <div>
@@ -137,7 +139,7 @@ function Jobs() {
                         <Button
                           variant="contained"
                           className="view btn"
-                          onClick={() => handleViewMoreClick(item)} 
+                          onClick={() => handleViewMoreClick(item)}
                         >
                           view more
                         </Button>
@@ -148,16 +150,18 @@ function Jobs() {
                           onClose={handleClose}
                           TransitionComponent={Transition}
                         >
-                       
-                          <AppBar sx={{ position: "relative" }} className="job_popup_bar">
+                          <AppBar
+                            sx={{ position: "relative" }}
+                            className="job_popup_bar"
+                          >
                             <Toolbar>
-                           <IconButton
+                              <IconButton
                                 edge="start"
                                 color="inherit"
                                 onClick={handleClose}
                                 aria-label="close"
                               >
-                                Close  &nbsp; <CloseIcon />
+                                Close &nbsp; <CloseIcon />
                               </IconButton>
                             </Toolbar>
                           </AppBar>
@@ -166,20 +170,37 @@ function Jobs() {
                             <div className="job_popup_div">
                               <h2>{selectedJob.job}</h2>
                               <br />
-                            <span> Hospital Name: &nbsp; <p> {selectedJob.hospitalname}</p></span>
+                              <span>
+                                {" "}
+                                Hospital Name: &nbsp;{" "}
+                                <p> {selectedJob.hospitalname}</p>
+                              </span>
                               <br />
-                              <span>Location: &nbsp; <p>{selectedJob.location}</p></span>
+                              <span>
+                                Location: &nbsp; <p>{selectedJob.location}</p>
+                              </span>
                               <br />
-                              <span>Qualification: &nbsp; <p>{selectedJob.specialization}</p></span>
+                              <span>
+                                Qualification: &nbsp;{" "}
+                                <p>{selectedJob.specialization}</p>
+                              </span>
                               <br />
-                              <span>Experience Required: &nbsp;<p>{selectedJob.experience} years</p></span>
+                              <span>
+                                Experience Required: &nbsp;
+                                <p>{selectedJob.experience} years</p>
+                              </span>
                               <br />
-                              <span>Description: &nbsp;<p style={{width:'80%'}}> {selectedJob.details}</p></span>
+                              <span>
+                                Description: &nbsp;
+                                <p style={{ width: "80%" }}>
+                                  {" "}
+                                  {selectedJob.details}
+                                </p>
+                              </span>
                               <br />
                               <JobIcon usrID={Uid} jobID={selectedJob._id} />
                             </div>
                           )}
-                          
                         </Dialog>
 
                         <JobIcon usrID={Uid} jobID={item._id} />

@@ -14,11 +14,16 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Search from "../Banner/Search";
 import axios from "axios";
 import { Divider } from "@mui/material";
+import { useNavigate } from "react-router";
+
 
 function Header() {
   const [user, setUser] = useState([]);
+  const navigate = useNavigate();
+
   function handleLogout() {
     sessionStorage.clear();
+    navigate("/");
     window.location.reload();
   }
 
