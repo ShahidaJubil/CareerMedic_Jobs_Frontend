@@ -1,0 +1,70 @@
+.form-container {
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+  gap: 5%;
+  justify-content: center;
+}
+
+.form-container input {
+  /* padding: 0.6rem; */
+  border-radius: 5px;
+}
+
+.form-container button {
+  height: 2.3rem;
+}
+
+
+.searchDiv {
+  margin: 1.5rem;
+  background-color: rgba(51, 51, 51, 0.5);
+  padding: 3rem;
+  border-radius: 15px;
+}
+
+.searchDiv h5 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.icon_style {
+  color: var(--secondaryColor);
+  margin-bottom: -4px;
+}
+
+@media screen and (max-width: 1930px) {
+
+  .form-container {
+    grid-template-columns: 25% 25% 25%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .form-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .form-container {
+    grid-template-columns: 1fr;
+    gap: 2%;
+  }
+
+  .searchDiv {
+    margin: 2rem;
+  }
+}
+
+.search-icon:hover{
+  cursor: pointer !important;
+}
+.searchField{
+  border-radius: 5px;
+  background-color: white !important;
+}
+.search-icon{
+  color:var(--secondaryColor);
+}

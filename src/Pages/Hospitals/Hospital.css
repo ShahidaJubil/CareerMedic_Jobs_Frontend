@@ -1,0 +1,68 @@
+.hospital_div{
+    display: grid;
+    grid-template-columns: 25% 43% 30%;
+
+}
+.img_hospital img{
+    width: 100%;
+    height:80vh;
+}
+.hospital_details{
+    padding-left: 1.5rem;
+    text-align: justify;
+}
+.hospital_details h1{
+    margin-bottom: 2rem;
+    color: var(--text_color)
+}
+.hospital_details h3{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.hospital_careers{
+
+    margin: 1.5rem;
+}
+.hospital_careers li{
+    list-style-type: none;
+    line-height: 1.7rem;
+}
+.hospital_div{
+    padding-bottom: 4rem;
+}
+
+.hospital_careers, .hospital_details{
+    height: 100vh;
+    overflow-y: scroll;
+}
+.hospital_careers::-webkit-scrollbar{
+    display: none;
+}
+.hospital_details::-webkit-scrollbar{
+    display: none;
+}
+.hospital_details{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    height: 85vh;
+}
+@media screen and (max-width:500px) {
+    .hospital_div{
+        grid-template-columns: 1fr ;
+        margin: 0rem;
+    }
+    .hospital_details p{
+        text-align: left !important;
+    }
+    .vacancy p,.vacancy li{
+        text-align: left;
+    }
+}
+@media screen and (max-width:350px) {
+    .vacancy p,.vacancy li{
+        text-align: justify;
+    }
+    .hospital_details p{
+        text-align: justify !important;
+        margin-right: 1rem;
+    }
+}

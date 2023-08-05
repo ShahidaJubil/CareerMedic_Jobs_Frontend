@@ -1,0 +1,45 @@
+.slideshow {
+  margin: 2rem;
+  margin-left: 5rem;
+}
+.image img {
+  height: 140px;
+  width: 100%;
+}
+.card {
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  margin-right: 1rem;
+  margin-bottom: 3rem;
+}
+.content {
+  padding-bottom: 10px;
+  line-height: 1.5rem;
+}
+.content h5 {
+  margin-top: -20px;
+}
+.content h5,
+h6 {
+  color: black;
+}
+.Title{
+  text-align: center
+}
+@media screen and (max-width:1920px) {
+  .image img {
+    height: 240px;
+  }
+}
+@media screen and (max-width:1440px) {
+  .image img {
+    height: 140px;
+  }
+}
+@media screen and (max-width:450px) {
+.premiumSwiper{
+
+  margin-left: -2rem;
+}
+}

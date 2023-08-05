@@ -1,0 +1,23 @@
+.partnersbg {
+  background-image: url("https://as2.ftcdn.net/v2/jpg/03/46/80/55/1000_F_346805525_z2hiw6xT2Qi8tOU9Lgnv8Oblt2rLwrDl.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.partnersCard {
+  border: 1px solid rgb(177, 174, 174);
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.partnersbg h1 {
+  text-align: center;
+  padding: 8rem;
+  font-size: 2.6rem;
+}
+.partnersCard img {
+  width: 90%;
+  height: 200px;
+}
+.partnersPageDiv {
+  padding-bottom: 4rem;
+}

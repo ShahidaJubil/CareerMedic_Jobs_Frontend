@@ -1,0 +1,130 @@
+.login_contents {
+  background-color: white;
+  text-align: center;
+}
+.loginDiv {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  justify-content: center;
+  background-color: white;
+  margin: 3% 13%;
+  padding: 0%;
+}
+.loginMain {
+  background-image: url("https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-56228.jpg?w=996&t=st=1688708780~exp=1688709380~hmac=3f95d519b7d37603704dac7d2b77c24befe41f7bbcd1fdf1c8aa094da8fc1995");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.hospitalLoginMain {
+  padding-top: 3%;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/003/127/950/original/abstract-soft-blue-background-with-dynamic-waves-shape-free-vector.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.loginContainer {
+  padding-top: 3%;
+}
+.input_login {
+  width: 100%;
+}
+.login_button {
+  background-color: rgb(23, 129, 174) !important;
+  width: 80% !important;
+  padding: 0.2rem !important;
+  font-size: 1.2rem !important;
+}
+.buttonWidth{
+  width: 90% !important;
+}
+.loginIcons {
+  color: rgb(23, 129, 174) !important;
+}
+.login_contents input {
+  margin: 1.6%;
+  padding: 2%;
+}
+.login_contents input:focus {
+  outline: none;
+}
+.login_contents textarea:focus {
+  outline: none;
+}
+.required {
+  color: red;
+  font-size: 0.7rem;
+}
+.error-pwd {
+  color: red;
+  font-size: 0.7rem;
+  transform: translate(calc(50% - 20px));
+}
+.img-signup img {
+  width: 100% !important;
+  height: 88.5%;
+}
+.img-signup {
+  background-image: url("https://img.freepik.com/premium-photo/doctor-patient-handshake_151013-11283.jpg?w=900");
+  background-size: cover;
+}
+@media screen and (max-width: 1920px) {
+  .input_login,
+  .login_button {
+    width: 70%;
+  }
+  .loginMain {
+    padding-top: 10%;
+  }
+  .login_contents {
+    padding: 6rem 3rem;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .input_login,
+  .login_button {
+    width: 90%;
+  }
+  .loginMain {
+    padding-top: 4%;
+  }
+  .login_contents {
+    padding: 3rem;
+  }
+}
+@media screen and (max-width: 940px) {
+  .login_contents {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 580px) {
+  .login_contents {
+    width: 70%;
+    padding: 1.5rem;
+  }
+  .loginContainer {
+    padding-top: 3rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .login_contents {
+    width: 77%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .input_login,
+  .login_button {
+    width: 100%;
+  }
+  .loginMain {
+    padding-bottom: 4rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .input_login {
+    width: 13rem !important;
+  }
+  .login_button {
+    width: 13rem !important;
+  }
+}

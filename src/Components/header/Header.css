@@ -1,0 +1,191 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0.2rem;
+  background: transparent;
+  color: var(--primary);
+  margin-bottom: 3rem;
+}
+.header_btn {
+  height: 40px;
+  width: max-content;
+}
+
+nav a {
+  color: var(--secondaryColor);
+  margin: 0.2rem;
+  text-decoration: none;
+  background-color: var(--primary);
+}
+nav a:hover {
+  color: white;
+}
+
+.btn:hover {
+  color: var(--secondaryColor);
+  background-color: white !important;
+  border: 1px solid var(--secondaryColor);
+}
+.nav-close-btn {
+  margin-left: 39rem;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+header img {
+  height: 4.2rem;
+  margin-left: 1.2rem;
+}
+.btn {
+  background-color: var(--secondaryColor) !important;
+  margin-left: 0.6rem !important;
+}
+a {
+  text-decoration: none;
+}
+
+header .nav-btn {
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  background: var(--secondaryColor);
+  border: 2px;
+  outline: none;
+  color: white;
+  display: none;
+}
+.header_icon {
+  color: var(--secondaryColor) !important;
+}
+.HeaderSearchFields {
+  display: grid;
+  grid-template-columns: 35% 30% 30%;
+  gap: 5%;
+}
+.menu_item p {
+  color: black;
+}
+.searchBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  border-radius: 1rem;
+  background-color: #ccc;
+  border: 0.5px solid #000;
+  box-shadow: 24;
+  /* padding: 4.5rem; */
+}
+.HeaderSearchFields {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+}
+
+.menu_item :last-child {
+  padding-bottom: 0.5rem !important;
+}
+.close_icon {
+  color: var(--secondaryColor);
+}
+.menu_item {
+  height: 5.5rem;
+}
+.searchResultHeader {
+  height: 5rem;
+  overflow-y: scroll;
+}
+.textField {
+  width: 96%;
+}
+
+.dropdown {
+  border: none !important;
+  background-color: rgb(214, 45, 90);
+  color: white;
+  padding: 0.55rem 1.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-div:hover{
+  background-color: #f4d5ec;
+  padding-left: 2% !important;
+}
+.dropdown-content {
+text-align: center;
+  display: none;
+  position: absolute;
+  margin-left: -3rem !important;
+  margin-top: 0.6rem !important;
+  background-color: #ffff;
+  min-width: 115px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.8rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.account {
+  color: var(--secondaryColor);
+  font-size: 1.8rem !important;
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+}
+
+.dropdownPost {
+  color: #000;
+}
+.dropdownPost:hover {
+  color: var(--secondaryColor);
+}
+
+@media screen and (max-width: 960px) {
+  .searchBox {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .nav-btn {
+    display: contents;
+    background: var(--secondaryColor);
+  }
+  .searchBox {
+    width: 500px;
+  }
+  .HeaderSearchFields {
+    grid-template-columns: 1fr 1fr;
+  }
+  nav a {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .searchBox {
+    width: 50%;
+  }
+  .HeaderSearchFields {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .menu_item {
+    height: 4.5rem;
+  }
+  .searchBox {
+    width: 50%;
+  }
+}

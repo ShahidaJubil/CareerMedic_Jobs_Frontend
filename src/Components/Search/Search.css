@@ -1,0 +1,27 @@
+.searchResult p {
+  color: black;
+  background-color: white;
+  padding-left: 1rem;
+  line-height: 2rem;
+}
+
+.search_input {
+  border: 1px solid rgb(5, 5, 53);
+  margin-top: 0.5rem;
+  width: 90%;
+  padding: 0.8rem !important;
+}
+
+.classname {
+  display: none;
+}
+.new-class {
+  height: 4rem;
+  overflow-y: auto;
+}
+.dataItem p {
+  background-color: white !important;
+  padding-left: 5px;
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+}

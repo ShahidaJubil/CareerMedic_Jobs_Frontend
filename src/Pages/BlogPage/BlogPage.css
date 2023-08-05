@@ -1,0 +1,27 @@
+.blog_banner {
+  padding: 1rem;
+  margin: 2rem;
+  background-image: url(../../Assets/blog.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55vh;
+}
+.blog_banner h1 {
+  margin-top: 11%;
+  font-size: 2.5rem;
+  color: var(--textColor);
+}
+.content {
+  font-size: 1rem;
+  margin: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .blog_banner h1 {
+    margin-top: 5%;
+    font-size: 2rem;
+  }
+  .blog_banner {
+    height: 60vh;
+    margin: 0.5rem;
+  }
+}

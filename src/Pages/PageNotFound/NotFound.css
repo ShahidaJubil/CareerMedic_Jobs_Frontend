@@ -1,0 +1,22 @@
+.notfound {
+  height: 120vh;
+  background-size: cover;
+}
+.notfound img{
+  width: 80%;
+  height: 70%;
+  margin: 0% 10% !important;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.notfound .btn {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  margin-left: 45% !important;
+  position: relative;
+  top: 10%;
+}
+
+ @media screen  and (max-width:500px){
+  .notfound .btn {
+      margin-left: 35% !important;
+  }
+} 

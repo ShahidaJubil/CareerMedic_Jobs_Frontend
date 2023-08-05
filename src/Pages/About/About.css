@@ -1,0 +1,22 @@
+.about_grid {
+  padding-left: 4rem;
+}
+.about_grid p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 600px) {
+  .about_grid p {
+    text-align: justify;
+  }
+  .about_grid {
+    margin-left: -64px !important;
+  }
+  .about_img img {
+    width: 90%;
+    height: 300px !important;
+  }
+  .about_grid h2 {
+    text-align: center;
+  }
+}

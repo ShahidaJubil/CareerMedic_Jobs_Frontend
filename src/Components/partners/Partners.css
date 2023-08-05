@@ -1,0 +1,17 @@
+.partnersSwiper {
+  padding: 3rem !important;
+}
+.partnersDiv {
+  text-align: center;
+  color: var(--textColor);
+  justify-content: center;
+}
+.partnersImage{
+  height: 9rem;
+  width: 19rem;
+}
+@media screen and (max-width:500px) {
+  .partnersDiv img{
+    width: 10rem;
+  }
+}

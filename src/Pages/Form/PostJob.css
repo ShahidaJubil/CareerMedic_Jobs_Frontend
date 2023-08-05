@@ -1,0 +1,55 @@
+.outsideDiv {
+  padding: 0% 30% 0%;
+}
+.postJobContainer {
+  padding: 2%;
+  text-align: center;
+  line-height: 4.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  margin-bottom: 3rem;
+}
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  cursor: pointer;
+  color: #707070;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 520px) {
+  .outsideDiv {
+    padding: 0% 6% 0% !important;
+  }
+}
+
+@media screen and(max-width:375px) {
+  .outsideDiv {
+    padding: 2rem !important;
+  }
+  .postJobContainer {
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+}
+.largeText {
+  width: 90% !important;
+}
+.error {
+  font-size: 1.2rem;
+  color: red;
+}
+.formDropdown{
+  border: none;
+}
+.autocomplete{
+  margin-top: -4.8rem;
+  margin-left: 4rem;
+}
+
+

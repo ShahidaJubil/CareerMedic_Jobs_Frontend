@@ -1,0 +1,20 @@
+.profileDiv_main{
+    display: grid;
+    grid-template-columns: 70% 20%;
+    gap: 5%;
+}
+.ad_profile img{
+    width: 100% !important;
+    position: sticky !important;
+}
+
+.profile_details_main{
+    padding-left: 5% !important;
+}
+.profiles p{
+    line-height: 1.7rem;
+}
+.subProfiles{
+    display: flex;
+    justify-content: space-between;
+}
