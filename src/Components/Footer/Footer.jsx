@@ -80,11 +80,11 @@ function Footer() {
             <Link to="/">
               <li>Home</li>
             </Link>
-            <Link to="/RegisterForm">
+            {/* <Link to="/RegisterForm">
             <li>Sign up</li></Link>
             <Link to="/Login">
               <li>Sign In</li>
-            </Link>
+            </Link> */}
             <Link to="/About">
               <li>About</li>
             </Link>
@@ -92,7 +92,7 @@ function Footer() {
               <li>Blogs</li>
             </Link>
 
-            <li>Events</li>
+            {/* <li>Events</li> */}
           </ul>
         </Grid>
         <Grid item xs={12} md={3} sm={4} lg={2.5}xl={2} className="footer3">
@@ -101,8 +101,8 @@ function Footer() {
             <br />
             <li>Data and intellectual Policy</li>
             <li>Terms and Conditions</li>
-            <li>Refund Policy</li>
-            <li>Sitemap</li>
+            {/* <li>Refund Policy</li>
+            <li>Sitemap</li> */}
           </ul>
         </Grid>
       </Grid>

@@ -150,3 +150,6 @@ display: none;
     width: 12rem;
   }
 }
+.resume{
+  display: flex !important;
+}

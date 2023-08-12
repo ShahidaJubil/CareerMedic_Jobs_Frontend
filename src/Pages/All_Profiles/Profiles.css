@@ -18,3 +18,8 @@
     display: flex;
     justify-content: space-between;
 }
+.job_popup_bar{
+    display: grid !important;
+   grid-template-columns: 35% 5%;
+   gap: 60%;
+}

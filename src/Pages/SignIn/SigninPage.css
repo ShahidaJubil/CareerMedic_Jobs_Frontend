@@ -10,6 +10,13 @@
   margin: 3% 13%;
   padding: 0%;
 }
+.SignupDiv{
+  display: grid;
+  grid-template-columns: 45% 55%;
+  justify-content: center;
+  background-color: white;
+  margin: 0% 13%;
+}
 .loginMain {
   background-image: url("https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-56228.jpg?w=996&t=st=1688708780~exp=1688709380~hmac=3f95d519b7d37603704dac7d2b77c24befe41f7bbcd1fdf1c8aa094da8fc1995");
   background-repeat: no-repeat;
@@ -127,4 +134,56 @@
   .login_button {
     width: 13rem !important;
   }
+}
+
+
+.resumeField{
+  border-bottom:1px solid rgb(151, 151, 151) ;
+  text-align: left;
+  color: rgb(145, 145, 145);
+  padding: 2.2%;
+  margin-top: 8%;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+/*----------------- Forgot Password -----------------------------------*/
+
+.forgotMain{
+  padding: 5% 15%!important;
+}
+.resetButton{
+  background-color:  #ee2c82 !important;
+  border: none !important;
+  color: white !important;
+  padding: 1.9% !important;
+  border-radius: 15px;
+  font-size: .8rem !important;
+}
+
+.forgotSub{
+  border: 0.2px solid rgb(230, 230, 230);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding: 5% ;
+  display: grid;
+  grid-template-columns: 38% 35%;
+  gap: 13%;
+}
+
+@media screen and (max-width:750px){
+  .forgotSub{
+    grid-template-columns: 1fr;
+    gap: 3%;
+    padding-bottom: 15% !important;
+  }
+  .resetButton{
+  text-align: center !important;
+  }
+}
+.terms:hover{
+  cursor: pointer;
+}
+.forgotSub img{
+  width: 100% !important;
 }

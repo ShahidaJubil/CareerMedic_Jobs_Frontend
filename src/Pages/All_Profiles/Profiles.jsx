@@ -43,24 +43,9 @@ function Profiles() {
   // }, []);
 
   const {
-    experience,
-    location,
-    specialization,
-    setExperience,
-    setLocation,
-    setSpecialization,
-    response,
+
     posts,
-    handleSearch,
-    initSearch,
-    closeModal,
-    openModal,
-    modal,
-    setModal,
-    modalData,
-    noInput,
     data,
-    clearResponse,
   } = useContext(ProfileSearchContext);
 
   const experienceSet = new Set(
@@ -109,17 +94,17 @@ function Profiles() {
   return (
     <div>
       <Header />
-      <h2 style={{ padding: "2%" }}>
+      <h2 style={{ padding: "1% 4%" }}>
         <b>Profiles</b>
       </h2>
-      <ProfileFilter
+      {/* <ProfileFilter
         option1={locationOptions}
         option2={specializationOptions}
         option3={experienceOptions}
         label1={"Location"}
         label2={"Specialization"}
         label3={"Experience"}
-      />
+      /> */}
       <br />
       <br />
       <br />
@@ -157,16 +142,18 @@ function Profiles() {
                       sx={{ position: "relative" }}
                       className="job_popup_bar"
                     >
-                      <Toolbar>
+                     <div>
+                        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Profile Details</h2></div>
+                        <div>
                         <IconButton
                           edge="start"
                           color="inherit"
                           onClick={handleClose}
                           aria-label="close"
                         >
-                          Close &nbsp; <CloseIcon />
+                       <CloseIcon />
                         </IconButton>
-                      </Toolbar>
+                        </div>
                     </AppBar>
 
                     {selectedJob && (

@@ -73,7 +73,6 @@ function Jobs() {
   const currentPosts = sortedPosts.slice(indexOfFirstPost, indexOfLastPost);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -154,6 +153,7 @@ function Jobs() {
                             sx={{ position: "relative" }}
                             className="job_popup_bar"
                           >
+                            <h2>&nbsp;&nbsp;&nbsp; View More Details</h2>
                             <Toolbar>
                               <IconButton
                                 edge="start"
@@ -161,7 +161,7 @@ function Jobs() {
                                 onClick={handleClose}
                                 aria-label="close"
                               >
-                                Close &nbsp; <CloseIcon />
+                              <CloseIcon />
                               </IconButton>
                             </Toolbar>
                           </AppBar>

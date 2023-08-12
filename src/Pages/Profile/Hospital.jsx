@@ -34,7 +34,7 @@ function HospitalProfile() {
 
       try {
         const resp = await axios.get(url);
-        // console.log("RESPF", resp);
+         console.log("RESPF-profile", resp);
         setuserData(resp.data);
         setJobsData(resp.data.postedJobs);
       } catch (err) {
@@ -104,20 +104,20 @@ function HospitalProfile() {
                 <div className="contents">
                   <ul>
                     <li>
-                      <h3>{userData?.data?.hospitalname}</h3>
+                      <h3>{userData?.profile?.name}</h3>
                       <h4>{userData?.data?.title}</h4>
                     </li>
                     <div className="Profile_list">
                       <li>
                         <h5>
                           Location:
-                          <span>{userData.location}</span>
+                          <span>{userData.profile.location}</span>
                         </h5>
                       </li>
                       <li>
                         <h5>
                           About:
-                          <span>{userData.about}</span>
+                          <span>{userData?.profile?.about}</span>
                         </h5>
                       </li>
                       <ul>
@@ -129,7 +129,7 @@ function HospitalProfile() {
                         <li>
                           <h5>
                             Contact:
-                            <span>{userData?.data?.contact}</span>
+                            <span>{userData?.profile?.contact}</span>
                           </h5>
                         </li>
                       </ul>

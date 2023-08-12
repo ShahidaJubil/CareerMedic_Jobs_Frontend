@@ -174,7 +174,9 @@ function Signin() {
                 >
                   Sign Up
                 </Link>
+               
               </p>
+              <Link to="/forgot-password">Forgot Password</Link>
             </form>
           </div>
         </div>

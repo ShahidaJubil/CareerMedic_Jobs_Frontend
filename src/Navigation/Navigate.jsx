@@ -24,6 +24,8 @@ import HospitalRegisterForm from "../Pages/SignUp/HospitalSignup";
 import PostDetails from "../Pages/Form/PostDetails";
 import Profiles from "../Pages/All_Profiles/Profiles";
 import JobDetailsPage from "../Pages/Jobs/JobDetails";
+import ForgotPassword from "../Pages/SignIn/ForgotPassword";
+import ResetPassword from "../Pages/SignIn/ResetPassword";
 
 
 
@@ -56,7 +58,8 @@ function Navigate() {
           <Route exact path="/upload/details" element={<PostDetails/>} />
           <Route exact path="/get/profiles" element={<Profiles/>} />
           <Route exact path="/job/details/:id" element={<JobDetailsPage/>} />
-
+          <Route path="/forgot-password" element={<ForgotPassword />}></Route>
+          <Route path="/reset_password/:id/:token" element={<ResetPassword />}></Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
         <div></div>
