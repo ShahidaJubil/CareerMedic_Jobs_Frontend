@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
+
 function Hospital() {
   const { id } = useParams();
   const [data, setData] = useState([]);

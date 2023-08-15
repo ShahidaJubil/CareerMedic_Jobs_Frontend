@@ -359,8 +359,8 @@ function RegisterForm() {
                     )}
                   </div>
                 </Grid>
-                <Grid item lg={.6} md={6} sm={12} xs={12}></Grid>
-                <Grid item lg={4.7} md={6} sm={12} xs={12}>
+               
+                {/* <Grid item lg={4.7} md={6} sm={12} xs={12}>
                   <div className="uk-margin resumeField">
                     <label htmlFor="resume">Resume</label>
                     <input
@@ -375,8 +375,8 @@ function RegisterForm() {
                       <span className="error-pwd">{formErrors.cv}</span>
                     )}
                   </div>
-                </Grid>
-                <Grid item lg={6} md={6} sm={12} xs={12}></Grid>
+                </Grid> */}
+               
                 <Grid item lg={6} md={6} sm={12} xs={12}>
                   <div className="uk-margin">
                     <TextField
@@ -387,7 +387,7 @@ function RegisterForm() {
                         </>
                       }
                       variant="standard"
-                      type="text"
+                      type="password"
                       aria-label="Input"
                       onChange={(e) => setPassword(e.target.value)}
                     />
@@ -407,7 +407,7 @@ function RegisterForm() {
                         </>
                       }
                       variant="standard"
-                      type="text"
+                      type="password"
                       aria-label="Input"
                       onChange={(e) => setCpassword(e.target.value)}
                     />

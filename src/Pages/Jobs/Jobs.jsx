@@ -59,6 +59,7 @@ function Jobs() {
     const handleUID = async () => {
       const usr = sessionStorage.getItem("uid");
       setUid(usr);
+      
     };
     handleUID();
   }, []);
@@ -107,6 +108,7 @@ function Jobs() {
             </Grid>
             {data &&
               currentPosts.map((item, id) => {
+                
                 return (
                   <Grid item xs={12} sm={6} md={6} lg={6} key={id}>
                     <div className="job_container">
@@ -198,7 +200,7 @@ function Jobs() {
                                 </p>
                               </span>
                               <br />
-                              <JobIcon usrID={Uid} jobID={selectedJob._id} />
+                              <JobIcon resume={selectedJob.resume} usrID={Uid} jobID={selectedJob._id} />
                             </div>
                           )}
                         </Dialog>
